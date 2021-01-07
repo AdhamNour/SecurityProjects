@@ -9,6 +9,9 @@
                 "${file}",
                 "${fileDirname}\\ClassicalCipher\\CaeserCipher\\CaeserCipher.h",
                 "${fileDirname}\\ClassicalCipher\\CaeserCipher\\CaeserCipher.cpp",
+                "${fileDirname}\\ClassicalCipher\\PlayFairCipher\\PlayFairCipher.h",
+                "${fileDirname}\\ClassicalCipher\\PlayFairCipher\\PlayFairCipher.cpp",
+
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
