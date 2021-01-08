@@ -11,7 +11,10 @@
                 "${fileDirname}\\ClassicalCipher\\CaeserCipher\\CaeserCipher.cpp",
                 "${fileDirname}\\ClassicalCipher\\PlayFairCipher\\PlayFairCipher.h",
                 "${fileDirname}\\ClassicalCipher\\PlayFairCipher\\PlayFairCipher.cpp",
-
+                "${fileDirname}\\ClassicalCipher\\HillCipher\\MatrixMultiplication\\MatrixMultiplication.h",
+                "${fileDirname}\\ClassicalCipher\\HillCipher\\MatrixMultiplication\\MatrixMultiplication.cpp",
+                "${fileDirname}\\ClassicalCipher\\HillCipher\\HillCipher.h",
+                "${fileDirname}\\ClassicalCipher\\HillCipher\\HillCipher.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
