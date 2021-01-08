@@ -15,6 +15,9 @@
                 "${fileDirname}\\ClassicalCipher\\HillCipher\\MatrixMultiplication\\MatrixMultiplication.cpp",
                 "${fileDirname}\\ClassicalCipher\\HillCipher\\HillCipher.h",
                 "${fileDirname}\\ClassicalCipher\\HillCipher\\HillCipher.cpp",
+                "${fileDirname}\\ClassicalCipher\\VigenereCipher\\VigenereCipher.h",
+                "${fileDirname}\\ClassicalCipher\\VigenereCipher\\VigenereCihper.cpp",
+
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],

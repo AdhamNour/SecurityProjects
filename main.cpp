@@ -6,19 +6,11 @@
 
 //#include "ClassicalCipher/CaeserCipher/CaeserCipher.h"
 //#include "ClassicalCipher/PlayFairCipher/PlayFairCipher.h"
-#include "ClassicalCipher/HillCipher/HillCipher.h"
+#include "ClassicalCipher/VigenereCipher/VigenereCipher.h"
 using namespace std;
 int main(void)
 {
-    try
-    {
-        HillCipher hillCipher({{5, 17},
-                               {8, 3}});
-        cout << hillCipher.encrypt("Adham  Nour") << endl;
-    }
-    catch (const char *msg)
-    {
-        cout << msg << endl;
-    }
+    string str ="adham adham adham adham adham";
+    cout << vigenereCihper(str,"hell")<<endl;
     return 0;
 }
