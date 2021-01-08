@@ -5,19 +5,19 @@
 #include<vector>
 #include<set>
 #include<sstream>
+#include<map>
 using namespace std;
 class PlayFairCipher
 {
 private:
     string key = "";
-    vector<vector<char> >* keyTable =  NULL;
+    vector<vector<char> > keyTable ;
     void setKeyTable();
     string removeSpaces(const string& str);
-    string removeDublications(const string& str);
+    string removePairDublications(const string& str);
     pair<int,int> findPosition (const char& target);
 public:
-    PlayFairCipher(string key){setKey(key);}
-    ~PlayFairCipher();
+    PlayFairCipher(string key="adham"){setKey(key); }
     void setKey(const string& key);
     string encrypte(const string& plaintext);
 };
