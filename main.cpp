@@ -3,14 +3,17 @@
 #include <string>
 #include <set>
 #include <sstream>
+#include <stdlib.h>
 
-//#include "ClassicalCipher/CaeserCipher/CaeserCipher.h"
-//#include "ClassicalCipher/PlayFairCipher/PlayFairCipher.h"
-#include "ClassicalCipher/VigenereCipher/VigenereCipher.h"
+#include "ClassicalCipher/VernamCipher/VernamCipher.h"
+
 using namespace std;
 int main(void)
 {
-    string str ="adham adham adham adham adham";
-    cout << vigenereCihper(str,"hell")<<endl;
+    VernamCipher cipher("Spartan");
+    cout<< cipher.encrypt("PXPTYRFJ")<<endl
+    <<cipher.encrypt("FXGWYEAU")<<endl
+    <<cipher.encrypt("BBMHCXHP")<<endl;
+
     return 0;
 }

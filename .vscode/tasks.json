@@ -17,6 +17,10 @@
                 "${fileDirname}\\ClassicalCipher\\HillCipher\\HillCipher.cpp",
                 "${fileDirname}\\ClassicalCipher\\VigenereCipher\\VigenereCipher.h",
                 "${fileDirname}\\ClassicalCipher\\VigenereCipher\\VigenereCihper.cpp",
+                "${fileDirname}\\ClassicalCipher\\VernamCipher\\VernamCipher.h",
+                "${fileDirname}\\ClassicalCipher\\VernamCipher\\VernamCipher.cpp",
+
+
 
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"

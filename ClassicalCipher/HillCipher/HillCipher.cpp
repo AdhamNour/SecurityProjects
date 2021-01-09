@@ -1,6 +1,6 @@
 #include "HillCipher.h"
 #include <iostream>
-HillCipher::HillCipher(const vector<vector<char> >& key){
+void HillCipher::setKey(const vector<vector<char> >& key){
     if(!checkSquare(key)){
         throw "not square key";
     }
