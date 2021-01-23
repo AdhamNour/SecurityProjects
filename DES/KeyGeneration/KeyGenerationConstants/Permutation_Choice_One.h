@@ -1,3 +1,5 @@
+#ifndef PERMUTATION_CHOICE_ONE
+#define PERMUTATION_CHOICE_ONE
 int permutedChoice1 []={
     57, 49, 41, 33, 25, 17, 9,
     1, 58, 50, 42, 34, 26, 18,
@@ -8,3 +10,4 @@ int permutedChoice1 []={
     14, 6, 61, 53, 45, 37, 29,
     21, 13, 5, 28, 20, 12, 4
 };
+#endif // PERMUTATION_CHOICE_ONE

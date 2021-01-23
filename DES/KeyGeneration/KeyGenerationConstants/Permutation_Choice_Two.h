@@ -1,3 +1,5 @@
+#ifndef PERMUTATION_CHOICE_TWO
+#define PERMUTATION_CHOICE_TWO
 int permutedChoice2 [] = {
     14, 17, 11, 24, 1, 5,
     3, 28, 15, 6, 21, 10,
@@ -8,3 +10,4 @@ int permutedChoice2 [] = {
     44, 49, 39, 56, 34, 53,
     46, 42, 50, 36, 29, 32
 };
+#endif // PERMUTATION_CHOICE_TWO
