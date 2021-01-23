@@ -7,7 +7,10 @@ class DataConverter
 {
 private:
     inline static string hexa;
-    char convertFromDecimal2Hexadecimal(const int &target);
+    char convertFromDecimal2Hexadecimal(const int &target)
+    {
+        return DataConverter::hexa[target];
+    }
 
 public:
     DataConverter()
