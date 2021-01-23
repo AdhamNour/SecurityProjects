@@ -10,10 +10,5 @@
 using namespace std;
 int main(void)
 {
-    VernamCipher cipher("Spartan");
-    cout<< cipher.encrypt("PXPTYRFJ")<<endl
-    <<cipher.encrypt("FXGWYEAU")<<endl
-    <<cipher.encrypt("BBMHCXHP")<<endl;
-
     return 0;
 }
