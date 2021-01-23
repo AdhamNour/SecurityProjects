@@ -1,7 +1,7 @@
 #include "KeyGeneration.h"
 #include "./KeyGenerationConstants/LeftCircularShift.h"
 #include "./KeyGenerationConstants/Permutation_Choice_Two.h"
-
+#include <iostream>
 vector<string> KeyGeneration::generateKeys(const string &key)
 {
     string key_bin;
@@ -18,7 +18,7 @@ vector<string> KeyGeneration::generateKeys(const string &key)
         string final_key(24*2,'0');
         for (int i = 0; i < final_key.length(); i++)
         {
-            final_key[i] = CD[permutedChoice2[i]];
+            final_key[i] = CD[permutedChoice2[i]-1];
         }
         keys[i]=final_key;
     }

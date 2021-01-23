@@ -11,7 +11,7 @@ using namespace std;
 int main(void)
 {
     KeyGeneration keyGeneration;
-    auto x =keyGeneration.generateKeys("0000000000000000");
+    auto x =keyGeneration.generateKeys("ABCDEDCBA5432ACB");
     for (auto &&i : x)
     {
         cout<<i<<endl;
