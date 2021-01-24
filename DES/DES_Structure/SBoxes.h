@@ -1,3 +1,5 @@
+#ifndef S_BOXES
+#define S_BOXES
 #include <vector>
 using namespace std;
 vector<vector<vector<int> > > SBoxes  = {
@@ -65,3 +67,4 @@ vector<vector<vector<int> > > SBoxes  = {
             {2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11},
         }
     };
+#endif

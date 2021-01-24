@@ -1,3 +1,5 @@
+#ifndef INITIAL_PERMUTATION
+#define INITIAL_PERMUTATION
 int InitialPermutation[] = {
     40, 8, 48, 16, 56, 24, 64, 32,
     39, 7, 47, 15, 55, 23, 63, 31,
@@ -7,3 +9,4 @@ int InitialPermutation[] = {
     35, 3, 43, 11, 51, 19, 59, 27,
     34, 2, 42, 10, 50, 18, 58, 26,
     33, 1, 41, 9, 49, 17, 57, 25};
+#endif

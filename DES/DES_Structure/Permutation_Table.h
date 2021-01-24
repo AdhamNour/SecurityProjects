@@ -1,3 +1,5 @@
+#ifndef PERMUTATION_TABLE
+#define PERMUTATION_TABLE
 int permutationTable[] = {
     16,
     7,
@@ -32,3 +34,4 @@ int permutationTable[] = {
     4,
     25,
 };
+#endif // PERMUTATION_TABLE

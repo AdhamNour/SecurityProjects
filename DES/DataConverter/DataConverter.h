@@ -21,6 +21,7 @@ public:
     int convertFromBinary2Decimal(const string &target);
     string convertFromHexadecimal2Binary(const char &target);
     char convertFromBinary2Hexadecimal(const string &target);
+    void Binarize(const string& target , string& target_bin);
 };
 
 #endif

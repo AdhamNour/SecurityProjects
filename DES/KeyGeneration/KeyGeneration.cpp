@@ -1,11 +1,13 @@
 #include "KeyGeneration.h"
 #include "./KeyGenerationConstants/LeftCircularShift.h"
 #include "./KeyGenerationConstants/Permutation_Choice_Two.h"
+#include "../DataConverter/DataConverter.h"
 #include <iostream>
 vector<string> KeyGeneration::generateKeys(const string &key)
 {
     string key_bin;
-    BinarizeKey(key , key_bin);
+    DataConverter dataConverter;
+    dataConverter.Binarize(key , key_bin);
     string C(28,'0');
     string D(28,'0');
     compriseKey(key_bin, C,D);

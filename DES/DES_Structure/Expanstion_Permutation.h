@@ -1,3 +1,5 @@
+#ifndef EXPANSION_PERMUTATION
+#define EXPANSION_PERMUTATION
 int expansion_permutation[] = {
     32, 1, 2, 3, 4, 5,
     4, 5, 6, 7, 8, 9,
@@ -7,3 +9,4 @@ int expansion_permutation[] = {
     20, 21, 22, 23, 24, 25,
     24, 25, 26, 27, 28, 29,
     28, 29, 30, 31, 32, 1};
+#endif 
