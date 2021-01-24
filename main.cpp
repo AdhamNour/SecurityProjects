@@ -5,17 +5,13 @@
 #include <sstream>
 #include <stdlib.h>
 
-#include "./DES/KeyGeneration/KeyGeneration.h"
+#include "./DES/DES.h"
 
 using namespace std;
+//ABCDEDCBA5432ACB
 int main(void)
 {
-    KeyGeneration keyGeneration;
-    auto x =keyGeneration.generateKeys("ABCDEDCBA5432ACB");
-    for (auto &&i : x)
-    {
-        cout<<i<<endl;
-    }
-    
+    DES des;
+    cout<<des.encrypt("ABC00F0ABCDEDCBA5432ACB","ABCDEDCBA5432ACB");
     return 0;
 }
