@@ -8,6 +8,7 @@ string DataConverter::convertFromDecimal2Binary(int target)
     while (target > 0)
     {
         // storing remainder in binary array
+        //TODO: Enhance it using vector<bool>
         if (target % 2 == 1)
             binaryNum[i] = '1';
         else
