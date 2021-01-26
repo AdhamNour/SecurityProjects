@@ -5,13 +5,13 @@
 #include <sstream>
 #include <stdlib.h>
 
-#include "./DES/DES.h"
+#include "./DES/DES_Structure/DES_Functions/BlockEncryptor/DES_Round/DES_Round.h"
+#include "./DES/DataConverter/DataConverter.h"
 
 using namespace std;
-//ABCDEDCBA5432ACB
 int main(void)
 {
-    DES des;
-    cout<<des.encrypt("ABC00F0ABCDEDCBA5432ACB","ABCDEDCBA5432ACB");
+    
+    
     return 0;
 }
