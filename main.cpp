@@ -10,7 +10,6 @@
 using namespace std;
 int main(void)
 {
-    DES des;
-    cout<<des.encrypt("FFFFFFFFFFFFFFFF","0000000000000000")<<endl;
+    
     return 0;
 }

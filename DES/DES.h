@@ -14,6 +14,7 @@ private:
     void paddingPlainText(string &binarizedPlaintext);
 public:
     string encrypt(const string &plaintext, const string &key);
+    string decrypt(const string &ciphertext, const string &key);    
 };
 
 

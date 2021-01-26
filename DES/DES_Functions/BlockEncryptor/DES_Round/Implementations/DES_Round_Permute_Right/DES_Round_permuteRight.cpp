@@ -12,5 +12,5 @@ void DES_Round::permuteRight(string& target){
     {
         result[i] =target[permutationTable[i]-1];
     }
-    
+    target = result;
 }
