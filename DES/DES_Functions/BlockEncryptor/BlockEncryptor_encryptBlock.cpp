@@ -5,6 +5,8 @@ string BlockEncryptor::encryptBlock(const string& block, const vector<string>& k
     {
         des_round.executeRound(initialPermutatedBlock,keyList[i]);
     }
-    
-    return "1111";
+    string final_block = initialPermutatedBlock.substr(32)+initialPermutatedBlock.substr(0,32);
+    string result = finalPermutate(final_block);
+
+    return result;
 }

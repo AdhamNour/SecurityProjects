@@ -1,6 +1,6 @@
 #include<vector>
 
-#include "../../DES.h"
+#include "../DES.h"
 
 string DES::encrypt(const string &plaintext, const string &key){
     vector<string> keys = keyGeneration.generateKeys(key);
