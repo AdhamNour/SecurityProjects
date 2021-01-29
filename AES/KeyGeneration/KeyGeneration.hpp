@@ -8,7 +8,7 @@ class KeyGeneration
 {
 private:
     DataConverter dataConverter;
-public:
     vector<unsigned char> getTheDecimalArrayFromHexadeciaml(const string& key);
+public:
     vector<vector<unsigned char>> genrtateKeys(const string& key);
 };
