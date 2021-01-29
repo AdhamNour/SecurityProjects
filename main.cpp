@@ -5,7 +5,7 @@
 #include <sstream>
 #include <stdlib.h>
 
-#include "./DES/DES.h"
+#include "AES/KeyGeneration/KeyGeneration.hpp"
 
 using namespace std;
 int main(void)

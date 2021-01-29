@@ -7,7 +7,7 @@ class DataConverter
 {
 private:
     inline static string hexa;
-    char convertFromDecimal2Hexadecimal(const int &target)
+    char convertFromDecimal2HexadecimalDegit(const int &target)
     {
         return DataConverter::hexa[target];
     }
@@ -23,6 +23,8 @@ public:
     char convertFromBinary2Hexadecimal(const string &target);
     void Binarize(const string& target , string& target_bin);
     string Hexadecimalize(const string& target);
+    unsigned char convertFromHexadecimal2Decimal(const string &target);
+    string convertFromDecimal2Hexadecimal(const int &target);
 };
 
 #endif
