@@ -10,6 +10,13 @@
 using namespace std;
 int main(void)
 {
-    cout<<"Hello World"<<endl;
+    string x(32,'A');
+    KeyGeneration keyGen;
+    vector<unsigned char> res = keyGen.getTheDecimalArrayFromHexadeciaml(x);
+    for (auto &&i : res)
+    {
+        cout<<(int) i <<' ';
+    }
+    cout<<endl<<res.size()<<endl;
     return 0;
 }
