@@ -1,6 +1,7 @@
 #include "../KeyGeneration.hpp"
 #include "../../AES_Constants/SBox/SBox.hpp"
 #include "../KeyGenerationConstants/RoundConstants.hpp"
+#include "../../AES_Utils/SubBytes/SubBytes.hpp"
 #include <iostream>
 vector<vector<unsigned char> > KeyGeneration::genrtateKeys(const string&key){
     if(key.length() != 32 ){
@@ -18,7 +19,7 @@ vector<vector<unsigned char> > KeyGeneration::genrtateKeys(const string&key){
             row0[i-13]=PreviousKey[i];
         }
         row0[3]=PreviousKey[12];
-        
+        SubBytes(row0);
     }
     
 }
