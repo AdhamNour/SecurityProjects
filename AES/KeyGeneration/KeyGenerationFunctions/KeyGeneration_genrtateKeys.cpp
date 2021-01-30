@@ -1,7 +1,10 @@
 #include "../KeyGeneration.hpp"
 #include "../../AES_Constants/SBox/SBox.hpp"
 #include "../KeyGenerationConstants/RoundConstants.hpp"
+
 #include "../../AES_Utils/SubBytes/SubBytes.hpp"
+#include "../../AES_Utils/VectorSlice/VectorSlice.hpp"
+
 #include <iostream>
 vector<vector<unsigned char> > KeyGeneration::genrtateKeys(const string&key){
     if(key.length() != 32 ){
@@ -13,12 +16,9 @@ vector<vector<unsigned char> > KeyGeneration::genrtateKeys(const string&key){
     keys[0]=AES_Key;
     for (int i = 0; i < keys.size(); i++)
     {
-        vector<unsigned char> currentKey,PreviousKey(keys[i]),row0(4);
-        for (int i = 13; i < PreviousKey.size(); i++)
-        {
-            row0[i-13]=PreviousKey[i];
-        }
-        row0[3]=PreviousKey[12];
+        vector<unsigned char> currentKey,PreviousKey(keys[i]),row0(4),rcon ={(unsigned char)RoundConstants[i],0,0,0};
+        sliceVector(PreviousKey,row0,12);
+        rotate(row0);//rotate the key
         SubBytes(row0);
     }
     
