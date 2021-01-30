@@ -4,28 +4,26 @@
 #include <set>
 #include <sstream>
 #include <stdlib.h>
-#include<cstdlib>
+#include <cstdlib>
 
-#include "AES/AES_Utils/VectorSlice/VectorSlice.hpp"
-#include "AES/AES_Utils/SubBytes/SubBytes.hpp"
+#include "AES/KeyGeneration/KeyGeneration.hpp"
 
 using namespace std;
 int main(void)
 {
-    vector<unsigned char> vch (16);
-    for (unsigned int i = 0; i <vch.size();i++)
-        vch[i] = rand()%256;
-    SubBytes(vch);
+    string str = "0123456789ABCDEF0123456789ABCDEF";
+    KeyGeneration keyGeneration;
+    vector<vector<unsigned char>> z = keyGeneration.genrtateKeys(str);
+    for (auto &&i : z)
+    {
+        cout<<i.size() <<endl;
+        cout << '[';
+        for (auto &&j : i)
+        {
+            cout <<'\t'<<(int) j << ',';
+        }
+        cout << ']' << endl;
+    }
 
-    for (auto &&i : vch)
-        cout<<(int)i<<' ';
-
-    cout<<endl;
-
-    vector<unsigned char> vch2(4);
-    sliceVector(vch,vch2,3);
-
-    for (auto &&i : vch2)
-        cout<<(int)i<<' ';
     return 0;
 }
