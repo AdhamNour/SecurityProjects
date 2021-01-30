@@ -20,7 +20,7 @@ int main(void)
         cout << '[';
         for (auto &&j : i)
         {
-            cout <<'\t'<<(int) j << ',';
+            cout <<' '<<(int) j << ',';
         }
         cout << ']' << endl;
     }
