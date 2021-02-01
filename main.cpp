@@ -7,10 +7,17 @@
 #include <cstdlib>
 
 #include "AES/KeyGeneration/KeyGeneration.hpp"
-#include "AES/AES_Utils/PrintingVectors/PrintingVector.hpp"
+#include "AES/AES_Utils/AES_Utils.hpp"
 
 using namespace std;
 int main(void)
 {
+    KeyGeneration keyGeneration;
+    auto x = keyGeneration.genrtateKeys("0123456789ABCDEF0123456789ABCDEF");
+    for (auto &&i : x)
+    {
+        AES_Utils::print(i,"");
+    }
+    
     return 0;
 }
