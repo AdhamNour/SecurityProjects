@@ -8,19 +8,15 @@
 
 #include "AES/KeyGeneration/KeyGeneration.hpp"
 #include "AES/AES_Utils/AES_Utils.hpp"
+#include "AES/AES.hpp"
 
 using namespace std;
 int main(void)
 {
-    KeyGeneration keyGeneration;
-    auto x = keyGeneration.genrtateKeys("0123456789ABCDEF0123456789ABCDEF");
-    for (auto &&i : x)
-    {
-        AES_Utils::print(i,"");
-    }
-    vector<unsigned char> currRow;
-    AES_Utils::sliceVector(x[10],currRow,0,4);
-    AES_Utils::print(currRow,"test Result");
+    auto x = AES_Utils::getTheDecimalArrayFromHexadeciaml("0123456789ABCDEF1536247890ABCDEF");
+    AES aes;
+    auto y = aes.shiftRows(x);
+    AES_Utils::print(y,"y");
     
     return 0;
 }
