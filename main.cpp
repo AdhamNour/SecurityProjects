@@ -18,6 +18,9 @@ int main(void)
     {
         AES_Utils::print(i,"");
     }
+    vector<unsigned char> currRow;
+    AES_Utils::sliceVector(x[10],currRow,0,4);
+    AES_Utils::print(currRow,"test Result");
     
     return 0;
 }

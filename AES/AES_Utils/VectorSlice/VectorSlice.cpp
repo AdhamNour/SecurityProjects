@@ -5,9 +5,23 @@ void AES_Utils::sliceVector(
     const int &startWith,
     const int &step)
 {
-    for (int i = startWith; i < startWith + result.size(); i++)
+    int initalResultSize = result.size();
+    int loopEnd;
+    if(initalResultSize == 0)
+        loopEnd = originalVector.size();
+    else
+        loopEnd = startWith + result.size()*step;
+    for (int i = startWith; i < loopEnd ; i+=step)
     {
         //FIXME: need to be configured
-        result[i - startWith] = originalVector[i];
+    if(initalResultSize != 0){
+        result[(i - startWith)/step] = originalVector[i];
+    }
+    else
+    {
+        result.push_back(originalVector[i]);
+    }
+    
+
     }
 }
