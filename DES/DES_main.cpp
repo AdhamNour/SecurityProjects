@@ -24,16 +24,25 @@ int main(void)
             i = toupper(i);
         }
     }
-    DES des ;
-    cout<<"[E]ncrypt or [D]ecryot"<<endl;
+    DES des;
+    cout << "[E]ncrypt or [D]ecryot" << endl;
     char x;
-    cin>>x;
-    x=toupper(x);
-    if(x=='E'){
-        cout<<des.encrypt(plaintext,key)<<endl;
-    }
-    else if (x=='D')
+    cin >> x;
+    int n;
+    cout << "Please enter the number of times you wanna me apply that DES operation using that key" << endl;
+    cin >> n;
+    x = toupper(x);
+    string result(plaintext);
+    for (int i = 0; i < n; i++)
     {
-        cout<<des.decrypt(plaintext,key);
+        if (x == 'E')
+        {
+            result = des.encrypt(result, key);
+        }
+        else if (x == 'D')
+        {
+            result = des.encrypt(result, key);
+        }
     }
+    cout<<result<<endl;
 }
