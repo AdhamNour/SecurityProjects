@@ -1,3 +1,4 @@
+sudo apt install clang
 clang++ -std=c++17  $(find . -name "*.cpp") $(find . -name "*.h")
 ./a.out
-rm $(find . -name "*.gch") 
+rm $(find . -name "*.gch") a.out
