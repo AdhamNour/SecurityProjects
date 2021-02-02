@@ -1,12 +1,12 @@
 #include "../../../AES.hpp"
 #include "../../../AES_Utils/AES_Utils.hpp"
-vector<unsigned char> AES::shiftRows(const vector<unsigned char>&target){
+vector<unsigned char> AES::InverseShiftRows(const vector<unsigned char>&target){
     vector<unsigned char> rows[4];
     vector<unsigned char> row;
     for (int i = 0; i < 4; i++)
     {
         AES_Utils::sliceVector(target,row,i,4);
-        AES_Utils::rotate(row,i);
+        AES_Utils::rotate(row,i,true);
         rows[i]=row;
     }
     vector<unsigned char> newTarget;

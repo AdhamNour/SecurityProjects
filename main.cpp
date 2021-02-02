@@ -15,9 +15,8 @@ using namespace std;
 int main(void)
 {
     AES aes;
-    cout<<aes.encrypt("0123456789ABCDEF0123456789ABCDEF","0123456789ABCDEF0123456789ABCDEF")<<endl;
-    // vector<unsigned char> testingBlock ={ 124, 84, 153, 10, 196, 177, 24, 41, 167, 157, 163, 241, 99, 29, 101, 28};
-    // auto resultBlock =aes.shiftRows(testingBlock);
-    // AES_Utils::print(resultBlock,"resultBlock");
+    auto res = aes.encrypt("0123456789ABCDEF0123456789ABCDEF","0123456789ABCDEF0123456789ABCDEF");
+    cout<<res<<endl;
+    cout<<aes.decrypt(res,"0123456789ABCDEF0123456789ABCDEF")<<endl;
     return 0;
 }
