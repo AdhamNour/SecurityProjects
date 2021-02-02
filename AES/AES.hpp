@@ -11,6 +11,7 @@ private:
 public:
     vector<unsigned char> shiftRows(const vector<unsigned char>& target);
     vector<unsigned char> mixColomns(const vector<unsigned char>& target);
+    string encrypt(const string& plaintext, const string& key);
 };
 
 
