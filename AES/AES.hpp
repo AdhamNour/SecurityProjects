@@ -10,6 +10,7 @@ private:
     
 public:
     vector<unsigned char> shiftRows(const vector<unsigned char>& target);
+    vector<unsigned char> mixColomns(const vector<unsigned char>& target);
 };
 
 

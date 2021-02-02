@@ -15,8 +15,7 @@ int main(void)
 {
     auto x = AES_Utils::getTheDecimalArrayFromHexadeciaml("0123456789ABCDEF1536247890ABCDEF");
     AES aes;
-    auto y = aes.shiftRows(x);
-    AES_Utils::print(y,"y");
+    auto y = aes.mixColomns(x);
     
     return 0;
 }
