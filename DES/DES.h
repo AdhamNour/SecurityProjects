@@ -2,7 +2,7 @@
 #define DES_ALGORITHM
 #include <string>
 #include "./KeyGeneration/KeyGeneration.h"
-#include "../DataConverter/DataConverter.h"
+#include "DataConverter/DataConverter.h"
 #include "./DES_Functions/BlockEncryptor/BlockEncryptor.h"
 using namespace std;
 class DES
