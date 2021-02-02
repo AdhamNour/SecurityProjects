@@ -1,7 +1,7 @@
 #include "../../AES.hpp"
 #include "../../AES_Utils/AES_Utils.hpp"
 #include "../../KeyGeneration/KeyGeneration.hpp"
-#include "../../../DataConverter/DataConverter.h"
+#include "../../DataConverter/DataConverter.h"
 string AES::encrypt(const string &plaintext, const string &key)
 {
     KeyGeneration keyGeneration;
