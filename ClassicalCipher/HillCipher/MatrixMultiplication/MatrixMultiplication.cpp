@@ -27,7 +27,7 @@ string multiply(const vector<vector<char>> &x, const string &y)
         char sum = 0;
         for (int j = 0; j < x[i].size(); j++)
             sum += x[i][j] * y[j];
-        result += sum;
+        result += ('A' + sum%26);
     }
     return result;
 }

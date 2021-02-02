@@ -1,11 +1,18 @@
 #include "VigenereCipher.h"
 #include "../CaeserCipher/CaeserCipher.h"
-string vigenereCihper(const string& plaintext,const string& key){
+#include<ctype.h>
+string vigenereCihper(const string& plaintext,const string& key, const bool& auto_mode){
     string ciphertext;
+    string Key = key + (auto_mode?plaintext:"");
     for (int i = 0; i < plaintext.length(); i++)
     {
-        char keychar = tolower(key[i%key.length()]);
+        char keychar = tolower(Key[i%Key.length()]);
         ciphertext += caeserCipher(plaintext.substr(i,1),(int)(keychar-'a'));
     }
+    for (auto &&i : ciphertext)
+    {
+        i = toupper(i);
+    }
+    
     return ciphertext;
 }
