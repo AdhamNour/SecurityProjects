@@ -9,13 +9,15 @@
 #include "AES/KeyGeneration/KeyGeneration.hpp"
 #include "AES/AES_Utils/AES_Utils.hpp"
 #include "AES/AES.hpp"
+#include "DataConverter/DataConverter.h"
 
 using namespace std;
 int main(void)
 {
-    auto x = AES_Utils::getTheDecimalArrayFromHexadeciaml("0123456789ABCDEF1536247890ABCDEF");
     AES aes;
-    auto y = aes.mixColomns(x);
-    AES_Utils::print(y,"y");    
+    cout<<aes.encrypt("0123456789ABCDEF0123456789ABCDEF","0123456789ABCDEF0123456789ABCDEF")<<endl;
+    // vector<unsigned char> testingBlock ={ 124, 84, 153, 10, 196, 177, 24, 41, 167, 157, 163, 241, 99, 29, 101, 28};
+    // auto resultBlock =aes.shiftRows(testingBlock);
+    // AES_Utils::print(resultBlock,"resultBlock");
     return 0;
 }

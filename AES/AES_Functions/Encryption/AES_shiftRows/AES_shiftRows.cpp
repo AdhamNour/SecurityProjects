@@ -9,13 +9,12 @@ vector<unsigned char> AES::shiftRows(const vector<unsigned char>&target){
         AES_Utils::rotate(row,i);
         rows[i]=row;
     }
-    vector<unsigned char> newTarget(target.size());
-    int i = 0;
+    vector<unsigned char> newTarget;
     for (size_t j = 0; j < 4; j++)
     {
         for (size_t k = 0; k < rows[j].size(); k++)
         {
-            newTarget[i++] = rows[j][k];
+            newTarget.push_back(rows[k][j]);
         }
         
     }
