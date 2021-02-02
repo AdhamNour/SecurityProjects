@@ -1,11 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
 #include "CaeserCipher/CaeserCipher.h"
-#include "HillCipher/HillCipher.h"
-#include "PlayFairCipher/PlayFairCipher.h"
-#include "VernamCipher/VernamCipher.h"
+#include "HillCipher/HillCipherWrapper/HillCipherWrapper.hpp"
+#include "PlayFairCipher/PlayFairCipherWrapper/PlayFairCipherWrapper.hpp"
+#include "VernamCipher/VernamCipherWrapper/VernamCipherWrapper.hpp"
 #include "VigenereCipher/VigenereCipher.h"
 
 using namespace std;
@@ -99,14 +100,14 @@ void hillCipher()
     cout << "Choose the Key size: ";
     int n;
     cin >> n;
-    HillCipher hilCipher({{0}});
+    vector<vector<char> >key;
     if (n == 2)
-        hilCipher.setKey({{5, 17},
-                          {8, 3}});
+        key ={{5, 17},
+                          {8, 3}};
     else if (n == 3)
-        hilCipher.setKey({{2, 4, 12},
+        key = {{2, 4, 12},
                           {9, 1, 6},
-                          {7, 5, 3}});
+                          {7, 5, 3}};
     while (1)
     {
         string file_path;
@@ -122,7 +123,7 @@ void hillCipher()
             string inputData;
             while (getline(input_file, inputData))
             {
-                myfile << hilCipher.encrypt(inputData)<<endl;
+                myfile << hill_cipher(inputData,key)<<endl;
             }
             myfile.close();
             break;
@@ -133,7 +134,6 @@ void hillCipher()
 }
 
 void playFairCipher(){
-    PlayFairCipher playfairCipher1("rats"),playfairCipher2("archangle");
     while (1)
     {
         string file_path;
@@ -150,8 +150,8 @@ void playFairCipher(){
             string inputData;
             while (getline(input_file, inputData))
             {
-                myfile_rats << playfairCipher1.encrypte(inputData)<<endl;
-                myfile_archangles << playfairCipher2.encrypte(inputData)<<endl;
+                myfile_rats << playfair(inputData,"rats" )<<endl;
+                myfile_archangles << playfair(inputData,"archangles" )<<endl;
 
             }
             myfile_archangles.close();
@@ -164,7 +164,6 @@ void playFairCipher(){
 }
 
 void vernamCipher(){
-    VernamCipher vc("SPARTANS");
     while (1)
     {
         string file_path;
@@ -180,8 +179,7 @@ void vernamCipher(){
             string inputData;
             while (getline(input_file, inputData))
             {
-                myfile << vc.encrypt(inputData)<<endl;
-
+                myfile << vernam_ciper(inputData,"SPARTANS")<<endl;
             }
             myfile.close();
             break;
