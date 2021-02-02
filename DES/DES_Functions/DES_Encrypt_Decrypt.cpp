@@ -4,25 +4,15 @@
 #include "../DES.h"
 
 string DES::encrypt(const string &plaintext, const string &key){
-    //cout<<"[DES::encrypt]: start"<<endl;
-    vector<string> keys = keyGeneration.generateKeys(key);
-    for (int i = 0; i < keys.size(); i++)
-    {
-        //cout<<"The key number "<<i<<'\t'<<keys[i]<<endl;
-    }
-    
+    vector<string> keys = keyGeneration.generateKeys(key);    
     string binarizedPlainText ;
     dataConverter.Binarize(plaintext,binarizedPlainText);
-    //cout<<"binarizedPlainText\t"<<binarizedPlainText<<endl;
     paddingPlainText(binarizedPlainText);
-    //cout<<"padded binarizedPlainText\t"<<binarizedPlainText<<endl;
     string encryptedBinary ;
     for (int i = 0; i < binarizedPlainText.size(); i+=64)
-    {   //cout<<"encryptedBinary before execute encrypt block :\t"<<encryptedBinary<<endl;
+    {   
         encryptedBinary += blockEncryptor.encryptBlock(binarizedPlainText.substr(i,64), keys);
-        //cout<<"encryptedBinary before execute encrypt block :\t"<<encryptedBinary<<endl;
     }
-    //cout<<"[DES::encrypt]: end"<<endl;
 
     return dataConverter.Hexadecimalize(encryptedBinary);
 }
