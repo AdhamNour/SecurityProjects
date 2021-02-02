@@ -17,7 +17,7 @@ private:
     string removePairDublications(const string& str);
     pair<int,int> findPosition (const char& target);
 public:
-    PlayFairCipher(string key="adham"){setKey(key); }
+    PlayFairCipher(const string& key){setKey(key); }
     void setKey(const string& key);
     string encrypte(const string& plaintext);
 };

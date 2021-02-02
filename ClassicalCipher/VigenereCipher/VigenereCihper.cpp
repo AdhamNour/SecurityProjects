@@ -9,10 +9,7 @@ string vigenereCihper(const string& plaintext,const string& key, const bool& aut
         char keychar = tolower(Key[i%Key.length()]);
         ciphertext += caeserCipher(plaintext.substr(i,1),(int)(keychar-'a'));
     }
-    for (auto &&i : ciphertext)
-    {
-        i = toupper(i);
-    }
+    
     
     return ciphertext;
 }
